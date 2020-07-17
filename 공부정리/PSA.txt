@@ -1,0 +1,28 @@
+PSA - 잘만든 인턴페이스
+
+나의 코드
+
+확장성이 좋지 못한 코드 or 기술에 특화되어 있는 코드
+
+나의 코드
+잘 만든 인터페이스(PSA)
+
+확장성이 좋지 못한 코드 or 기술에 특화되어있는 코드
+
+Service Abstraction
+
+
+HttpServlet을 이용해 doget, dopost같은 메소드들을 사용
+
+이를 사용하지 않고 만들 수 있게하는 것 -> 서비스 추상화
+
+
+스프링 웹 MVC
+@Controller와 @RequestMapping
+
+Servlet | Reactive
+
+톰캣, 제티, 네티, 언더토우
+
+
+스프링 트랜잭션 -- 잘 모르겠음..

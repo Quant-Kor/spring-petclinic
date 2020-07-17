@@ -1,0 +1,66 @@
+빈 -> 스프링 IoC 컨테이너가 관리하는 객체
+
+등록하는 방법
+Comonent Scanning
+@Component
+ -@Repository
+ -@Service
+ -@Controller
+ -@Configuration .. 등등
+
+또는 직접 일일히 XML이나 자바 설정파일에 등록
+
+꺼내쓰는 방법
+@Autowired 또는 @inject
+또는 ApplicationContext에서 getBean()으로 직접 꺼냄
+
+오로지 빈들만 의존성 주입을 해줌!
+
+
+복잡한 일을 하는 annotation 처리기가 들어있고 이는
+@springbootApplication에 가면 볼 수 있음
+
+
+@SpringBootApplication이 적힌 코드 하위 폴더부터 다 찾아보기 시작함
+
+@Controller와 @ComponentScan이라는 annotation을 보고 bean으로 등록
+
+Repository는 특정한 인터페이스를 통해 bean으로 등록이 됨(spring jpa)
+
+직접 자바설정파일에 등록하는 방법은
+@Configuration
+public class SampleConfig {
+
+	@Bean
+	public SampleController sampleController() {
+		return new SampleController();
+	}
+}
+
+
+이러한 코드에서
+private final OwnerRepository owners;
+private VisitRepository visits;
+
+	public OwnerController(OwnerRepository clinicService, VisitRepository visits) {
+		this.owners = clinicService;
+		this.visits = visits;
+	}
+
+
+꺼내는 방법 
+- OwnerController 부분을 다 없애고 Autowired 를 통해 IOC컨테이너 안에 있는 bean을 주입 받아서 사용할 수 있음
+
+@Autowired
+private OwnerRepository owners;
+@Autowired
+private VisitRepository visits;
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+alt + `  => vcs operation
+
+shitf 두번 -> search everywhere
+
+알트 + 엔터 => 빨간 줄이 그어져있는 메소드가 없을 때 메소드 만들 수 있게 해주는 단축창이 뜸!
+
+알트 + 인서트 => generate 단축키 (생성자 자동완성)
+
+콜론 앞에다가 %를 주어서 검색 앞문자 없이도 가능하게
+
+Ctrl + Alt + V --> Extract+Variable
+
+Ctrl + F9 -> 다시 빌드할 필요없이 프로그램 재실행!(변경사항 확인할때 주로 씀)

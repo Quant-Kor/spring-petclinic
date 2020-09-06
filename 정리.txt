@@ -1,0 +1,15 @@
+컨트롤 시프트 엔 --> 파일명 검색
+
+컨트롤 B --> 링크 따라가기
+
+알트 + 인서트 생성자 자동생성(getter, setter)
+
+컨트롤 + f9를 누르면 재시작 하지않고 변경된 사항 반영
+
+
+IOC 설명부분
+OwnerControlller를 보면 생성자에서 clinicService를 받아와서
+owner에 주어서 사용하고 있는데 이 또한 IOC의 일종으로 볼 수 있음
+만약 OwnerRepository가 없다면 owner와 관련된 명령들은 null명령이기 때문에 실행이 되지 않지만 OwnerRepository를 받아오기 때문에 실행이 됨 
+그러면 이 OwnerRepository owner는 어디서 의존성을 받는가?
+OwnerControllertest에 보면 mockbean으로 owner가 등록되어 있으며 이를 통해 자동으로 만들어진 객체가 빈으로 등록됨(스프링이 관리하는 객체) 

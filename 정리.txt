@@ -14,7 +14,26 @@ owner에 주어서 사용하고 있는데 이 또한 IOC의 일종으로 볼 수
 그러면 이 OwnerRepository owner는 어디서 의존성을 받는가?
 OwnerControllertest에 보면 mockbean으로 owner가 등록되어 있으며 이를 통해 자동으로 만들어진 객체가 빈으로 등록됨(스프링이 관리하는 객체)
 
+
+
 IoC 컨테이너
 applicationContext라는 것을 주로 사용해서 하지만 보통 빈에서 다 상속이 되어있기 때문에 applicationContext의 함수 GetBean로 갖고온 객체나 그냥 빈으로 상속받은 객체를 찍어보면 둘다 동일한 해시값을 갖고있는 것을 볼 수 있음 
 --> 멀티 쓰레드 상황에서 싱글톤으로 할때 좋다고함 (이 부분은 정확히 이해 못함) 
+
+
+
+
+Bean --> IOC 컨테이너 관리하는 객체!
+빈으로 등록하기 위해서는
+ComponentScan
+Controller
+Service 
+등등 애노테이션을 붙여주면 됨!
+
+또는 직접 일일히 등록하는 방법이 있음
+@Configuration 과 @Bean 사용!
+
+컨트롤 시프트 T --> 테스트 만들기
+@Autowired를 통해 객체들을 가져와서 사용하는 것도 좋은방법중 하나
+기존에는 생성자를 통해 주입받았다면 @Autowire는 간편하게 사용가능!
 

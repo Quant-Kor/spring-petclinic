@@ -55,5 +55,9 @@ AOP
 -바이트코드조작부분에서 a.java -> a.class ---(aop) -->메모리 (메모리에 올릴때 코드가 들어감) (aspectj)
 
 -프록시 패턴(스프링 AOP)
+@Around @Aspect @Component @Retention 등등 사용해서 만듦
+프록시 패턴은 공부할게 엄청 많음!
+
+
 
 

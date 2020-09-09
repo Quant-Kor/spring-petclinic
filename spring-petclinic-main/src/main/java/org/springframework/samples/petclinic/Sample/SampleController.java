@@ -5,5 +5,4 @@ package org.springframework.samples.petclinic.Sample;
 //@Controller
 public class SampleController {
 
-
 }
